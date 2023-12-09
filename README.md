@@ -1,1 +1,1 @@
-# algorithms-dsa
+This repository is aimed for containing all  the important algorithms that are used in DSA .

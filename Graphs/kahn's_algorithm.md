@@ -21,3 +21,12 @@ For example, a topological sorting of the following graph is “5 4 2 3 1 0”. 
 5. If the count of the visited nodes is not equal to the total number of vertices, then topological ordering is not possible as the graph contains a cycle.
 
 6. If the graph has no cycle, then print the `topological_order` array.
+
+
+## How to find the indegree of the node ?
+
+  indegree=[0]*V   (V-> Number of vertex)
+  for each edge(src,dest)  in Edges:
+    indegree[dest]+=1
+
+### Time Complexity: O(V+E)

@@ -1,11 +1,25 @@
-This repository is aimed for containing all  the important algorithms that are used in DSA .
+# Algorithms Repository
 
-For contributing in the repository, the code structure would be as follows :-
+This repository contains important algorithms used in DSA.
 
-*Topic Name 
-   *Source code of algorithm (preferably in python)
-   *Algorithm in .md format , explaining the various steps .
-   *If Algorithm needs image explanation , images can also be attached for better explanation 
+## Contributing Guidelines
 
+For contributing to the repository, follow this structure:
 
-Note :- If a topic folder is already created , don't create a new folder with or if a algorithm is already written , try to optimize or try to increase the code readbility in it or try to improve the algorithm definition 
+* **Topic Name**
+   * Source code of the algorithm (preferably in Python)
+   * Algorithm in .md format, explaining the various steps.
+   * If the algorithm needs image explanation, images can also be attached for better understanding.
+
+### Note:
+
+- If a topic folder is already created, don't create a new folder.
+- If an algorithm is already written, try to optimize it or improve code readability and the algorithm's definition.
+
+## Example Structure
+
+### Sorting Algorithms
+   * [Bubble Sort](sorting/bubble_sort.py)
+     * [Algorithm Explanation](sorting/bubble_sort.md)
+   * [Quick Sort](sorting/quick_sort.py)
+     * [Algorithm Explanation](sorting/quick_sort.md)

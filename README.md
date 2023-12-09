@@ -19,7 +19,7 @@ For contributing to the repository, follow this structure:
 ## Example Structure
 
 ### Sorting Algorithms
-   * [Bubble Sort](sorting/bubble_sort.py)
-     * [Algorithm Explanation](sorting/bubble_sort.md)
+   * [Kahn's Algorithm](Graphs/kahn's.py)
+     * [Algorithm Explanation](Graphs/kahn's_algorithm.md)
    * [Quick Sort](sorting/quick_sort.py)
      * [Algorithm Explanation](sorting/quick_sort.md)

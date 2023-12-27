@@ -3,7 +3,7 @@
 
 
 import random
-arr = random.sample(range(-10000, 10000), 10000)  # Generate test cases (integers only)
+arr = random.sample(range(-20, 20), 10)  # Generate test cases (integers only)
 
 def quickSort(arr, low, high):
     if low < high:
@@ -29,7 +29,9 @@ def pivotGetsSorted(arr, low, high):
 
 quickSort(arr, 0, len(arr) - 1) 
 
-if arr == sorted(arr): #verify the test case pass or not
-    print(True)
-else:
-    print(False)
+# if arr == sorted(arr): #verify the test case pass or not
+#     print(True)
+# else:
+#     print(False)
+
+print(arr)

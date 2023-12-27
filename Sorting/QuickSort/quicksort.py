@@ -34,4 +34,4 @@ quickSort(arr, 0, len(arr) - 1)
 # else:
 #     print(False)
 
-print(arr)
+print(arr) #Added to print the sorted array

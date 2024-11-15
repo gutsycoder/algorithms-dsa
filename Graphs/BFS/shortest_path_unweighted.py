@@ -9,7 +9,7 @@ def bfs(graph,S,par,dest):
         
         for neighbor in graph[node]:
             if dest[neighbor]==float('inf'):
-                q.append(node)
+                q.append(neighbor)
                 dest[neighbor]=dest[node]+1
                 par[neighbor]=node
 
@@ -18,8 +18,6 @@ def print_shortest_distance(graph,S,D,V):
     dest=[float('inf')]*V 
 
     bfs(graph,S,par,dest)
-    print(par)
-    print(dest)
     if dest[D]==float('inf'):
         print("Source And Destination Are Not Connected")
         return 
@@ -28,8 +26,9 @@ def print_shortest_distance(graph,S,D,V):
     current_node=D 
     path.append(D)
     while par[current_node]!=-1:
-        path.append(current_node)
         current_node=par[current_node]
+        path.append(current_node)
+        
 
     for i in range(len(path)-1,-1,-1):
         print(path[i],end=" ")
@@ -56,5 +55,4 @@ if __name__=="__main__":
         graph[edge[0]].append(edge[1])
         graph[edge[1]].append(edge[0])
     
-
     print_shortest_distance(graph,source,destination,V)

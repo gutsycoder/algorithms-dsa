@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdict,deque
 class Graph:
     def __init__(self,V):
         self.graph = defaultdict(list)
@@ -9,17 +9,25 @@ class Graph:
         self.graph[v].append(u)
     
 
+    def dfs(node,stack):
 
 
 
 
 
     def kosaraju_scc():
-        stack=[]
+        stack=deque([])
         fill_orders(0,stack)
+        scc=[]
         while stack:
             #Making another dfs to get the items from the stack 
-            
+            node=stack.pop()
+            component=[]
+            dfs_util(node,component)
+            scc.append(component[::])
+        return scc
+
+
 
 
 

@@ -1,54 +1,66 @@
 from collections import defaultdict,deque
 class Graph:
+
     def __init__(self,V):
         self.graph = defaultdict(list)
         self.V=V 
     
     def add_edge(self,u,v):
         self.graph[u].append(v)
-        self.graph[v].append(u)
     
 
     def dfs(self,node,visited,stack):
         visited.add(node)
-        stack.append(node)
         for neighbor in self.graph[node]:
             if neighbor not in visited:
                 self.dfs(neighbor,visited,stack)
+        stack.append(node)
+        # print(stack)
+        return stack
+
         
     def fill_orders(self,vertex,stack):
         visited=set()
         for i in range(vertex):
             if i not in visited:
-                dfs(i,visited,stack)
+                self.dfs(i,visited,stack)
         return stack
 
     def reverse_graph(self):
         transformed_graph= Graph(self.V)
-        for i in range(self.V):
-            for neighbor in self.graph:
+        for i in self.graph:
+            for neighbor in self.graph[i]:
                 transformed_graph.graph[neighbor].append(i)
-        self.graph=transformed_graph
+        print(self.graph)
+        print("transformed graph")
+        print(transformed_graph.graph)
+        self.graph=transformed_graph.graph
         return self.graph
-
-
-        for i in range(self.V):
-            for neighbor 
-
-
-
-    def kosaraju_scc():
+    
+    def dfs_util(self,node,visited,component):
+        visited.add(node)
+        component.append(node)
+        for neighbor in self.graph[node]:
+            if node not in visited:
+                self.dfs_util(node,visited,component)
+        return component
+    def kosaraju_scc(self):
         stack=deque([])
-        fill_orders(0,stack)
+        self.fill_orders(self.V,stack)
         #Reverse the graph 
-        reverse_graph()
+        print(stack)
+        self.reverse_graph()
         scc=[]
+        visited=set()
         while stack:
+
+
             #Making another dfs to get the items from the stack 
             node=stack.pop()
             component=[]
-            dfs_util(node,component)
-            scc.append(component[::])
+            if node not in visited:
+                self.dfs_util(node,visited,component)
+                scc.append(component[::])
         return scc
 
 

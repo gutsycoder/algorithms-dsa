@@ -41,14 +41,13 @@ class Graph:
         visited.add(node)
         component.append(node)
         for neighbor in self.graph[node]:
-            if node not in visited:
-                self.dfs_util(node,visited,component)
+            if neighbor not in visited:
+                self.dfs_util(neighbor,visited,component)
         return component
     def kosaraju_scc(self):
         stack=deque([])
         self.fill_orders(self.V,stack)
         #Reverse the graph 
-        print(stack)
         self.reverse_graph()
         scc=[]
         visited=set()
